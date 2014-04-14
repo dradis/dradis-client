@@ -27,7 +27,7 @@ To provide your access credentials:
 ```ruby
 require 'dradis-client'
 
-client = Dradis::Client.new
+client = Dradis::Client::Endpoint.new
 client.host = 'https://dradisfw.ip'
 client.user = 'adama'
 client.password = 'shared_password'
@@ -37,6 +37,16 @@ Or provide configuration in line:
 
 ```ruby
 client = Dradis::Client.new(host: 'https://dradisfw.ip', user: 'adama', password: 'shared_password')
+```
+
+Or in a block
+
+```ruby
+client = Dradis::Client::Endpoint.new do |config|
+  config.host          = "https://dradisfw.ip"
+  config.user          = "adama"
+  config.shared_secret = "shared_password"
+end
 ```
 
 ## Usage examples
