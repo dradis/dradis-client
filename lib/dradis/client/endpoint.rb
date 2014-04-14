@@ -1,8 +1,9 @@
 module Dradis
   module Client
     class Endpoint
-      attr_accessor :host, :shared_secret, :user
+      include Dradis::Client::API
 
+      attr_accessor :host, :shared_secret, :user
 
       # ------------------------------------------ Generic client configuration
 
