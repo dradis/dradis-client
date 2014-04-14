@@ -14,7 +14,12 @@ module Dradis
         @code = code
       end
 
+      # Raised when one of the config values is invalid
       class ConfigurationError < ::ArgumentError; end
+
+      # Raised when Dradis returns a 4xx HTTP status code
+      class ClientError < self; end
+
     end
   end
 end
