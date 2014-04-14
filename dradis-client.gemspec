@@ -2,8 +2,8 @@
 require File.expand_path('../lib/dradis/client/version', __FILE__)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'dradis-clinet'
-  spec.version       = Dradis::Client::Version
+  spec.name          = 'dradis-client'
+  spec.version       = Dradis::Client::VERSION
   spec.authors       = ['Daniel Martin']
   spec.email         = ['<etd@nomejortu.com>']
   spec.description   = %q{A Ruby wrapper for the Dradis API.}
