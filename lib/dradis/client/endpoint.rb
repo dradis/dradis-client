@@ -1,3 +1,8 @@
+require 'base64'
+require 'faraday'
+require 'json'
+
+
 module Dradis
   module Client
     class Endpoint
@@ -34,7 +39,7 @@ module Dradis
 
       # @return [String]
       def user_agent
-        @user_agent ||= "Dradis Ruby Gem #{Dradis::Client::Version}"
+        @user_agent ||= "Dradis Ruby Gem #{Dradis::Client::VERSION}"
       end
 
 
@@ -147,7 +152,7 @@ module Dradis
          def auth_header
            if shared_secret
              # Basic auth
-             "Basic %s" % Base64::strict_encode64([user, shared_secret].join(':'))
+             "Basic %s" % ::Base64::strict_encode64([user, shared_secret].join(':'))
            else
              # API token
              # "Token token=\"\""
