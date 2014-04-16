@@ -4,9 +4,22 @@ module Dradis
       module Nodes
         MAX_NODES_PER_REQUEST = 100
 
+        # Adds a new node to the Dradis project
+        #
+        # @see http://dradisframework.org/docs/api/v1/#nodes
+        # @authentication Requires user context
+        # @raise [Dradis::Client::Error::Unauthorized] Error raised when supplied user credentials are not valid.
+        # @return [Dradis::Client::Node] The created node.
+        # @param label [String] The label for the new node.
+        # @param options [Hash] A customizable set of options.
+        # @option options [Integer, Dradis::Client::Node] :parent_id Specifies the parent node for the new node.
+        def add_node(label, options={})
+          perform_with_object(:post, '/api/nodes.json', {node: options.merge(label: label)}, Dradis::Client::Node)
+        end
+
         # Returns extended information for up to 100 nodes
         #
-        # @see http://dradisframework.org/docs/api/v1/#users
+        # @see http://dradisframework.org/docs/api/v1/#nodes
         # @authentication Requires user context
         # @raise [Dradis::Client::Error::Unauthorized] Error raised when supplied user credentials are not valid.
         # @return [Array<Dradis::Client::Node>] The requested nodes.
@@ -26,7 +39,7 @@ module Dradis
           # end
         end
 
-        # @see http://dradisframework.org/docs/api/v1/#users
+        # @see http://dradisframework.org/docs/api/v1/#nodes
         # @authentication Requires user context
         # @raise [Dradis::Client::Error::Unauthorized] Error raised when supplied user credentials are not valid.
         # @return [Dradis::Client::Node] The requested node.
