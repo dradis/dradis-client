@@ -6,7 +6,7 @@ To start using the API in your Dradis, see [dradis-api][dradis-api].
 
 [travis]: http://travis-ci.org/dradis/dradis-client
 [gemnasium]: https://gemnasium.com/dradis/dradis-client
-[dradis-api]: https://github.com/dradis/dradis-api]
+[dradis-api]: https://github.com/dradis/dradis-api
 
 ## Installation
 
