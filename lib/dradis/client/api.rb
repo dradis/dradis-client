@@ -1,10 +1,11 @@
 require 'dradis/client/api/nodes'
+require 'dradis/client/api/notes'
 
 module Dradis
   module Client
     module API
       include Dradis::Client::API::Nodes
-      # include Dradis::Client::API::Notes
+      include Dradis::Client::API::Notes
 
       # @param request_method [Symbol]
       # @param path [String]
