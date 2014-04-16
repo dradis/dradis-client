@@ -1,9 +1,12 @@
 # Dradis Client Ruby Gem [![Build Status](https://secure.travis-ci.org/dradis/dradis-client.png?branch=master)][travis] [![Dependency Status](https://gemnasium.com/dradis/dradis-client.png?travis)][gemnasium]
 
-This gem provides a Ruby wrapper to the Dradis API (http://dradisframework.org).
+This gem provides a Ruby wrapper to the Dradis API.
+
+To start using the API in your Dradis, see [dradis-api][dradis-api].
 
 [travis]: http://travis-ci.org/dradis/dradis-client
 [gemnasium]: https://gemnasium.com/dradis/dradis-client
+[dradis-api]: https://github.com/dradis/dradis-api]
 
 ## Installation
 
