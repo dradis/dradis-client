@@ -19,7 +19,9 @@ Gem::Specification.new do |spec|
   # gem.add_runtime_dependency 'faraday', '~> 0.8'
   # see https://github.com/technoweenie/faraday/commit/b0d9a144596e96861a18d68f2418b7d74e7b791d
   spec.add_runtime_dependency 'faraday', '~> 0.8'
-  spec.add_runtime_dependency 'multi_json', '~> 1.3'
+
+  # Rails 3 seems to depend on ~> 1.0 of multi_json
+  spec.add_runtime_dependency 'multi_json', '~> 1.0'
 
   spec.add_development_dependency 'rake', '~> 0.8'
   spec.add_development_dependency 'rspec', '~> 2.8'
